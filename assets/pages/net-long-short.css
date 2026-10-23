@@ -1,0 +1,40 @@
+/* Page: net-long-short (Net Long vs Net Short + Margin Longs/Shorts). */
+.nls-pane { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.nls-pane[hidden] { display: none; }
+.nls-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.nls-bar .dh-sample { margin-left: auto; }
+.nls-venue { gap: 8px; }
+.nls-venue .muted { font-size: 12px; }
+.nls-chart { min-height: 240px; }
+.nls-legend { margin-top: 10px; }
+.nls-note { margin: 8px 0 0; font-size: 12px; }
+.nls-sub { font-size: 12px; font-weight: 400; }
+.nls-bias { display: flex; align-items: center; }
+.nls-bias .pill { font-size: 14px; padding: 3px 10px; }
+.nls-share { display: flex; align-items: center; gap: 8px; margin-top: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.nls-share .bar-ls { flex: 1; min-width: 0; height: 8px; border-radius: 4px; }
+.nls-flush .dh-card-b { padding-left: 2px; padding-right: 2px; }
+.nls-flush .dh-table td, .nls-flush .dh-table th { padding: 8px 10px; }
+.nls-flush .dh-spark { display: inline-block; vertical-align: middle; }
+.nls-sym { display: inline-flex; align-items: center; gap: 6px; }
+.dh-table tr.nls-sel td { background: color-mix(in srgb, var(--accent) 10%, transparent); }
+.nls-cell { display: flex; align-items: center; gap: 8px; }
+.nls-cell > span { width: 36px; font-weight: 600; }
+.nls-cell .bar-ls { min-width: 70px; flex: 1; }
+.nls-mv-h { font-size: 12px; font-weight: 600; margin: 4px 0 6px; }
+.nls-mv-h + .nls-mv { border-top: 0; }
+.nls-mv { display: grid; grid-template-columns: 90px minmax(40px, 1fr) 82px; align-items: center; gap: 10px; padding: 6px 0; font-variant-numeric: tabular-nums; font-size: 12.5px; }
+.nls-mv b { text-align: right; font-weight: 600; }
+.nls-mv-bar { height: 8px; border-radius: 4px; background: var(--card-2); overflow: hidden; }
+.nls-mv-bar i { display: block; height: 100%; border-radius: 4px; }
+.nls-mv-bar i.pos { background: var(--up); }
+.nls-mv-bar i.neg { background: var(--down); }
+.nls-mv + .nls-mv-h { margin-top: 12px; }
+.nls-faq p { margin: 0 0 10px; color: var(--text-2); max-width: 900px; }
+.nls-faq p:last-child { margin-bottom: 0; }
+
+@media (max-width: 560px) {
+  .nls-bar .dh-sample { margin-left: 0; }
+  .nls-venue .muted { display: none; }
+  .nls-mv { grid-template-columns: 76px minmax(30px, 1fr) 74px; gap: 6px; }
+}

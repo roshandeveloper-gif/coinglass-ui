@@ -1,0 +1,29 @@
+/* Page: treasuries */
+.tq-tabs { margin-top: -4px; }
+.tq-sub { font-size: 11.5px; margin-top: 2px; }
+.tq-note { margin: 10px 0 0; font-size: 12px; }
+.tq-legend { margin-top: 10px; }
+.tq-ent { display: inline-flex; flex-direction: column; line-height: 1.25; }
+.tq-ent > .muted { font-size: 11.5px; }
+.tq-tk { font-size: 10px; padding: 0 5px; margin-left: 4px; vertical-align: 1px; }
+.tq-cc { display: inline-block; min-width: 28px; padding: 1px 6px; border-radius: 4px; background: var(--bg-2); border: 1px solid var(--line); font-size: 11.5px; color: var(--text-2); }
+.tq-pp { display: block; font-size: 11px; }
+.tq-row { align-items: start; }
+.tq-donut-wrap { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.tq-donut { width: 190px; height: 190px; flex: none; margin: 0 auto; }
+.tq-donut .dh-donut-c b { display: block; font-size: 16px; }
+.tq-donut .dh-donut-c .muted { font-size: 11px; }
+.tq-dlist { flex: 1; min-width: 200px; }
+.tq-dlist > div { padding: 7px 4px; }
+.tq-dlist > .tq-on { background: var(--card-2); border-radius: 6px; }
+.tq-dot { width: 10px; height: 10px; border-radius: 2px; flex: none; }
+.tq-cost-stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-bottom: 10px; }
+.tq-cost-stats > div { background: var(--bg-2); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; display: flex; flex-direction: column; gap: 1px; min-width: 0; font-variant-numeric: tabular-nums; }
+.tq-cost-stats span { font-size: 11.5px; }
+.tq-cost-stats b { font-size: 14px; }
+.tq-vs tr.tq-crypto td { background: color-mix(in srgb, var(--warn) 10%, transparent); }
+.tq-faq p { margin: 0 0 10px; color: var(--text-2); max-width: 900px; }
+.tq-faq p:last-child { margin-bottom: 0; }
+@media (max-width: 640px) {
+  .tq-cost-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

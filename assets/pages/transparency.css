@@ -1,0 +1,40 @@
+/* Page: transparency (Assets Transparency) */
+.tp-sub { font-size: 11.5px; margin-top: 2px; font-weight: 400; }
+.tp-stats .stat .v { font-size: 20px; }
+.tp-card .dh-card-b { padding-top: 4px; }
+.tp-card tbody tr { cursor: pointer; }
+.tp-sel td { background: color-mix(in srgb, var(--accent) 10%, transparent); }
+.tp-warn { color: var(--warn); }
+.tp-ratio { display: inline-flex; align-items: center; gap: 8px; }
+.tp-ratio b { font-variant-numeric: tabular-nums; }
+.tp-ratio .pill { font-size: 10.5px; padding: 1px 6px; }
+.tp-name { display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.tp-legend { margin-top: 10px; }
+.tp-note { margin: 8px 0 0; font-size: 11.5px; }
+.tp-share { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 18px; align-items: center; }
+.tp-donut { width: 170px; height: 170px; }
+.tp-donut .dh-donut-c b { font-size: 13px; }
+.tp-dot { width: 9px; height: 9px; border-radius: 2px; flex: none; }
+.tp-pct { min-width: 48px; text-align: right; font-variant-numeric: tabular-nums; }
+.tp-list > div { padding: 7px 0; font-size: 12.5px; }
+
+.tp-bars, .tp-axis { --lab: 130px; --val: 64px; }
+.tp-bars { position: relative; display: flex; flex-direction: column; gap: 6px; }
+.tp-bar { display: grid; grid-template-columns: var(--lab) minmax(0, 1fr) var(--val); align-items: center; gap: 10px; font-size: 12.5px; }
+.tp-bar .dh-ex { gap: 6px; min-width: 0; overflow: hidden; white-space: nowrap; }
+.tp-bar b { text-align: right; font-variant-numeric: tabular-nums; }
+.tp-track { position: relative; height: 12px; background: var(--card-2); border-radius: 3px; }
+.tp-track::after { content: ''; position: absolute; top: -3px; bottom: -3px; left: var(--m); border-left: 1px dashed var(--text-2); }
+.tp-track i { display: block; height: 100%; border-radius: 3px; background: currentColor; opacity: .85; }
+.tp-axis { position: relative; height: 18px; margin-top: 6px; font-size: 11px; color: var(--text-3); }
+.tp-axis span { position: absolute; top: 0; transform: translateX(-50%); }
+.tp-axis span:first-child { left: calc(var(--lab) + 10px); transform: none; }
+.tp-axis span:last-child { right: calc(var(--val) + 10px); transform: none; }
+.tp-about p { margin: 0 0 8px; color: var(--text-2); max-width: 900px; line-height: 1.6; }
+.tp-about p:last-child { margin-bottom: 0; }
+@media (max-width: 560px) {
+  .tp-share { grid-template-columns: minmax(0, 1fr); justify-items: center; }
+  .tp-list { width: 100%; }
+  .tp-bars, .tp-axis { --lab: 92px; --val: 52px; }
+  .tp-stats .stat .v { font-size: 18px; }
+}

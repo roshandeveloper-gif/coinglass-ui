@@ -1,0 +1,36 @@
+/* Page: visual-screener */
+.vs-controls { display: flex; flex-wrap: wrap; gap: 10px 12px; align-items: flex-end; margin-bottom: 12px; }
+.vs-f { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.vs-f span { font-size: 12px; color: var(--text-3); }
+.vs-f .dh-select { min-width: 140px; max-width: 100%; }
+.vs-swap { height: 30px; width: 30px; border: 1px solid var(--line); border-radius: 7px; }
+.vs-stage { position: relative; width: 100%; }
+.vs-stage canvas { display: block; width: 100%; touch-action: manipulation; }
+.vs-tip { top: 0; min-width: 190px; }
+.vs-tip .t { display: flex; align-items: center; gap: 6px; color: var(--text-2); }
+.vs-tip .t b.vs-tsym { margin-left: 0; padding-left: 0; color: var(--text); }
+.vs-tq { margin-top: 4px; padding-top: 4px; border-top: 1px solid var(--line); color: var(--accent-2); font-weight: 600; }
+.vs-th { font-size: 11px; }
+.vs-under { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-top: 10px; }
+.vs-grad { width: 70px !important; border-radius: 3px !important; background: linear-gradient(90deg, var(--down), #78808f, var(--up)); }
+.vs-count { font-size: 12px; }
+.vs-lower { align-items: start; }
+.vs-search { width: 160px; }
+.vs-cat { display: inline-flex; align-items: center; gap: 6px; }
+.vs-cat i { width: 8px; height: 8px; border-radius: 2px; }
+.vs-q { color: var(--text-2); }
+.vs-quads { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.vs-quad { background: var(--bg-2); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.vs-qh { display: flex; justify-content: space-between; gap: 8px; }
+.vs-qcoins { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.vs-qcoins a { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; padding: 2px 6px 2px 3px; border-radius: 10px; background: var(--card-2); }
+.vs-foot { margin: 0; font-size: 12px; }
+
+@media (max-width: 560px) {
+  .vs-controls { display: grid; grid-template-columns: minmax(0, 1fr) 30px minmax(0, 1fr); }
+  .vs-controls .vs-f:nth-of-type(n + 3) { grid-column: span 3; }
+  .vs-f .dh-select { min-width: 0; width: 100%; }
+  .vs-quads { grid-template-columns: minmax(0, 1fr); }
+  .vs-search { width: 100%; }
+  .vs-card .dh-tools { margin-left: 0; }
+}

@@ -1,0 +1,16 @@
+/* Shared by the Open Interest pages: exchange checkbox dropdown (DH.OI.multiSelect). */
+.oi-ms { position: relative; }
+.oi-ms-btn { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+.oi-ms-btn b { font-weight: 600; }
+.oi-ms-pop { position: absolute; z-index: 20; top: calc(100% + 4px); left: 0; width: 220px; max-height: 320px; overflow: auto; padding: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+.oi-ms.right .oi-ms-pop { left: auto; right: 0; }
+.oi-ms-pop label { display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 6px; cursor: pointer; color: var(--text-2); }
+.oi-ms-pop label:hover { background: var(--card-2); color: var(--text); }
+.oi-ms-pop label i { width: 10px; height: 10px; border-radius: 2px; flex: none; }
+.oi-ms-pop input { accent-color: var(--accent); margin: 0; }
+.oi-ms-acts { display: flex; gap: 6px; padding: 2px 4px 6px; border-bottom: 1px solid var(--line); margin-bottom: 4px; }
+.oi-ms-acts button { font-size: 12px; color: var(--accent-2); padding: 2px 4px; }
+.oi-empty { display: flex; align-items: center; justify-content: center; min-height: 200px; padding: 20px; text-align: center; color: var(--text-3); }
+@media (max-width: 420px) {
+  .oi-ms-pop { width: min(220px, calc(100vw - 48px)); }
+}

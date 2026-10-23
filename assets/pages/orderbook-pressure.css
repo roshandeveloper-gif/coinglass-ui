@@ -1,0 +1,37 @@
+/* Page: orderbook-pressure */
+.obp-tools { flex-wrap: wrap; }
+.obp-pair { max-width: 100%; min-width: 0; }
+.obp-live { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--up); font-weight: 600; }
+.obp-live i { width: 7px; height: 7px; border-radius: 50%; background: var(--up); animation: obp-pulse 2s ease-in-out infinite; }
+@keyframes obp-pulse { 50% { opacity: .25; } }
+.obp-sub { font-size: 11.5px; margin-top: 2px; font-weight: 400; }
+.obp-stats .stat .v { font-size: 20px; }
+.obp-bar { margin-top: 8px; max-width: 220px; }
+.obp-dlegend { margin-top: 10px; }
+.obp-dlegend i + i { margin-left: -4px; }
+.obp-note { margin: 8px 0 0; font-size: 11.5px; }
+.obp-wcard .dh-card-b { padding-left: 4px; padding-right: 4px; }
+.obp-wcard .obp-note { padding: 0 10px; }
+.obp-wtable td, .obp-wtable th { padding: 7px 10px; }
+/* Cap the whale feed (it can run to 30+ rows) so the depth card beside it is not left beside a page of empty space. */
+.obp-whales .dh-table-scroll { max-height: 560px; overflow: auto; }
+.obp-wtable .dh-ex { gap: 6px; }
+.obp-st { font-size: 10.5px; padding: 1px 6px; }
+.obp-placed { color: var(--accent-2); }
+.obp-ratios { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; font-size: 12px; font-variant-numeric: tabular-nums; }
+.obp-rrow { display: grid; grid-template-columns: 44px 64px minmax(40px, 1fr) 64px 40px; align-items: center; gap: 8px; padding: 3px 6px; border-radius: 6px; }
+.obp-rrow.on { background: var(--card-2); }
+.obp-rrow span:nth-child(2) { text-align: right; }
+.obp-rrow .bar-ls { min-width: 40px; }
+.obp-rrow b { text-align: right; }
+.obp-howto { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.obp-howto h3 { font-size: 13.5px; margin-bottom: 6px; }
+.obp-howto p { margin: 0; color: var(--text-2); line-height: 1.6; }
+@media (max-width: 900px) {
+  .obp-howto { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .obp-stats .stat .v { font-size: 18px; }
+  .obp-tools { margin-left: 0; }
+  .obp-rrow { grid-template-columns: 40px 58px minmax(30px, 1fr) 58px 36px; gap: 6px; font-size: 11.5px; }
+}

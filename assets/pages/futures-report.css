@@ -1,0 +1,15 @@
+/* Page: futures-report */
+.fpr-sub { font-size: 12px; margin-top: 4px; }
+.fpr-note { font-size: 12px; margin: 10px 0 0; }
+.fpr-cat { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; font-weight: 600; }
+.fpr-cat i { width: 9px; height: 9px; border-radius: 2px; }
+.fpr-table td { white-space: nowrap; }
+.fpr-ls { width: 110px; }
+.fpr-sub-tools { margin-bottom: 10px; }
+.fpr-chart { min-height: 340px; }
+#fpr-week { max-width: 170px; }
+#fpr-hist a { color: var(--accent-2); }
+
+@media (max-width: 560px) {
+  .fpr-sub-tools .dh-seg button { padding: 3px 7px; }
+}

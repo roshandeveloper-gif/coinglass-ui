@@ -1,0 +1,21 @@
+/* Page: open-interest — additions on top of hub.css 'Page: open-interest'. */
+.oi-bar { display: flex; align-items: center; gap: 10px 12px; min-width: 0; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+.oi-bar .oi-tabs { flex: 1; border-bottom: 0; padding-bottom: 0; }
+/* The coin row scrolls sideways: fade its clipped edge instead of cutting a ticker against the Unit control. */
+.oi-bar .oi-tabs { min-width: 0; -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent); padding-right: 24px; }
+.oi-find { position: relative; flex: none; width: 190px; }
+.oi-find span { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); color: var(--text-3); pointer-events: none; }
+.oi-find input { width: 100%; padding-left: 26px; }
+.oi-nomatch { flex: 1; font-size: 12px; }
+.oi-unit-l { display: inline-flex; align-items: center; gap: 6px; flex: none; font-size: 12px; }
+.oi-exc { min-height: 280px; }
+.oi-exc-sel { max-width: 160px; }
+.oi-table-card .dh-table td .dh-btn.sm { height: 24px; }
+@media (max-width: 820px) {
+  .oi-bar { flex-wrap: wrap; }
+  .oi-find { flex: 1 1 160px; width: auto; }
+  .oi-bar .oi-tabs, .oi-nomatch { order: 3; flex-basis: 100%; }
+  .oi-chart-card .dh-tools, .oi-exc-card .dh-tools, .oi-split-card .dh-tools { margin-left: 0; }
+}
+/* The live stat figures flash on every tick: hug the number instead of painting a full-width band across the card. */
+.oi-stats .stat .v[data-live-px], .oi-stats .stat .v[data-live-usd], .oi-stats .stat .v[data-live-coins] { display: inline-block; border-radius: 4px; padding: 0 4px; margin-left: -4px; }

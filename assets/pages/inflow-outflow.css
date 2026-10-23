@@ -1,0 +1,20 @@
+/* Page: inflow-outflow (Inflow/Outflow). */
+.io-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.io-bar .dh-sample { margin-left: auto; }
+.io-tf { min-width: 0; max-width: 100%; }
+.io-breadth { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.io-breadth .bar-ls { flex: 1; min-width: 0; height: 8px; border-radius: 4px; }
+.io-px { font-size: 12px; }
+.io-table-card .dh-card-b { padding-left: 0; padding-right: 0; }
+.io-nbar { position: relative; display: inline-block; width: 90px; height: 6px; margin-left: 10px; border-radius: 3px; background: var(--card-2); vertical-align: middle; }
+.io-nbar i { position: absolute; top: 0; bottom: 0; border-radius: 3px; }
+.io-nbar i.pos { left: 50%; background: var(--up); }
+.io-nbar i.neg { right: 50%; background: var(--down); }
+.io-legend { margin-bottom: 8px; width: 100%; }
+.io-note { margin: 8px 0 0; font-size: 12px; }
+@media (max-width: 560px) {
+  .io-bar .dh-sample { margin-left: 0; }
+  #io-q { width: 120px !important; }
+  #io-coin { max-width: 150px; }
+  .io-legend .r { margin-left: 0; }
+}

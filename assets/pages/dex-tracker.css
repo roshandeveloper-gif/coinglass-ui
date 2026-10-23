@@ -1,0 +1,71 @@
+/* Page: dex-tracker (On-chain Perps Tracker, invented DEX). */
+.dxt-pane { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.dxt-pane[hidden] { display: none; }
+.dxt-tabs { min-width: 0; }
+.dxt-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.dxt-bar .dh-sample { margin-left: auto; }
+.dxt-bar .dh-ex .muted { font-size: 12px; }
+.dxt-sub { font-size: 12px; font-weight: 400; }
+.dxt-note { margin: 8px 0 0; font-size: 12px; }
+.dxt-chart { min-height: 260px; }
+.dxt-legend { margin-top: 10px; }
+.dxt-live { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--up); }
+.dxt-live i { width: 7px; height: 7px; border-radius: 50%; background: var(--up); animation: dxt-pulse 1.6s ease infinite; }
+@keyframes dxt-pulse { 50% { opacity: .25; } }
+.dxt-flush .dh-card-b { padding-left: 2px; padding-right: 2px; }
+.dxt-flush .dh-table td, .dxt-flush .dh-table th { padding: 8px 10px; }
+.dxt-subline { font-size: 11px; margin-top: 1px; }
+.dxt-who { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1px; text-align: left; color: var(--text); }
+.dxt-who b { font-size: 12.5px; }
+.dxt-who:hover .dxt-addr, .dxt-who:hover b { color: var(--accent-2); }
+.dxt-addr { font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--text-2); }
+.dxt-lev { display: inline-block; padding: 1px 6px; border-radius: 4px; background: var(--card-2); color: var(--warn); font-size: 11.5px; font-weight: 600; }
+.dxt-ls { display: flex; align-items: center; gap: 8px; margin-top: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.dxt-ls .bar-ls { flex: 1; min-width: 0; height: 8px; border-radius: 4px; }
+.dxt-whale-grid { align-items: start; }
+.dxt-feed { display: flex; flex-direction: column; max-height: 720px; overflow: auto; }
+.dxt-ev { padding: 8px 4px; border-bottom: 1px solid var(--line); font-size: 12.5px; display: flex; flex-direction: column; gap: 3px; }
+.dxt-ev:last-child { border-bottom: 0; }
+.dxt-ev-h { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.dxt-ev-h .dxt-who { flex-direction: row; align-items: center; gap: 6px; }
+.dxt-ev-h .muted { font-size: 11px; }
+.dxt-cell { display: flex; align-items: center; gap: 8px; }
+.dxt-cell > span { width: 34px; font-weight: 600; }
+.dxt-cell .bar-ls { min-width: 70px; flex: 1; }
+
+/* Wallet analysis */
+.dxt-lookup { display: flex; flex-wrap: wrap; gap: 8px; }
+.dxt-lookup .dh-input { flex: 1 1 260px; min-width: 0; height: 32px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.dxt-lookup .dh-select { height: 32px; max-width: 100%; }
+.dxt-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.dxt-chip { padding: 4px 10px; border-radius: 14px; border: 1px solid var(--line); background: var(--bg-2); font-size: 12px; color: var(--text-2); }
+.dxt-chip:hover { color: var(--text); border-color: var(--text-3); }
+.dxt-whead { padding: 14px; }
+.dxt-whead-in { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.dxt-avatar { width: 42px; height: 42px; border-radius: 50%; flex: none; background: conic-gradient(from 90deg, hsl(var(--h) 60% 50%), hsl(calc(var(--h) + 120) 60% 45%), hsl(calc(var(--h) + 240) 60% 50%), hsl(var(--h) 60% 50%)); }
+.dxt-wid { min-width: 0; flex: 1; }
+.dxt-wid h2 { font-size: 16px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.dxt-full { display: flex; align-items: center; gap: 4px; margin-top: 4px; min-width: 0; }
+.dxt-full code { font-size: 12px; color: var(--text-2); overflow-wrap: anywhere; min-width: 0; }
+.dxt-wbal { display: flex; flex-direction: column; align-items: flex-end; }
+.dxt-wbal b { font-size: 22px; font-variant-numeric: tabular-nums; }
+
+/* Liquidation map */
+.dxt-liqwrap { position: relative; }
+.dxt-pxline { position: absolute; top: 10px; bottom: 24px; width: 0; border-left: 1px dashed var(--text-2); pointer-events: none; }
+.dxt-pxline span { position: absolute; top: 0; left: 4px; white-space: nowrap; font-size: 11px; padding: 1px 6px; border-radius: 4px; background: var(--card-2); border: 1px solid var(--line); color: var(--text); }
+
+/* Token burn */
+.dxt-supply { display: flex; flex-direction: column; gap: 10px; }
+.dxt-supply > div:not(.dh-legend):not(.dxt-supbar) { display: flex; justify-content: space-between; gap: 10px; font-variant-numeric: tabular-nums; }
+.dxt-supbar { display: flex; height: 10px; border-radius: 5px; overflow: hidden; background: var(--card-2); margin-top: 4px; }
+
+@media (max-width: 820px) {
+  .dxt-feed { max-height: 420px; }
+}
+@media (max-width: 560px) {
+  .dxt-bar .dh-sample { margin-left: 0; }
+  .dxt-bar .dh-ex .muted { display: none; }
+  .dxt-wbal { align-items: flex-start; }
+  .dxt-pxline span { left: auto; right: 4px; }
+}

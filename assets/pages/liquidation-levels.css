@@ -1,0 +1,71 @@
+/* Page: liquidation-levels */
+.ll-ctl-in { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: flex-end; }
+.ll-f { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.ll-f > span { font-size: 11.5px; color: var(--text-3); }
+.ll-coin-f { display: grid; grid-template-columns: auto auto; gap: 5px 8px; }
+.ll-coin-f > span { grid-column: 1 / -1; }
+.ll-q { width: 130px; }
+.ll-coin { min-width: 170px; max-width: 100%; }
+.ll-tiers { display: flex; flex-wrap: wrap; gap: 6px 12px; min-height: 30px; align-items: center; }
+.ll-tier { display: inline-flex; align-items: center; gap: 4px; color: var(--text-2); cursor: pointer; white-space: nowrap; }
+.ll-tier input { accent-color: var(--accent); margin: 0 2px 0 0; }
+
+/* Tier shades: deeper = higher leverage. */
+.ll-long { --base: var(--up); }
+.ll-short { --base: var(--down); }
+.ll-long, .ll-short { background: color-mix(in srgb, var(--base) var(--mix, 60%), var(--card-2)); }
+.t0 { --mix: 30%; }
+.t1 { --mix: 48%; }
+.t2 { --mix: 66%; }
+.t3 { --mix: 84%; }
+.t4 { --mix: 100%; }
+.ll-sw { display: inline-block; width: 8px; height: 10px; border-radius: 2px; vertical-align: -1px; }
+.ll-sw + .ll-sw { margin-left: 1px; margin-right: 3px; }
+
+.ll-sub { font-size: 11.5px; color: var(--text-3); margin-top: 4px; }
+.ll-stats .stat .v { font-size: 20px; }
+.ll-lsbar { margin-top: 10px; }
+
+.ll-head, .ll-row { display: grid; grid-template-columns: 104px 62px minmax(0, 1fr) 70px 74px; gap: 8px; align-items: center; }
+.ll-head { font-size: 11px; color: var(--text-3); padding: 0 0 6px; border-bottom: 1px solid var(--line); }
+.ll-bars { max-height: 640px; overflow-y: auto; scrollbar-width: thin; }
+.ll-row { padding: 2px 0; font-size: 12px; font-variant-numeric: tabular-nums; }
+.ll-row:hover { background: var(--card-2); }
+.ll-p { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ll-p em { font-style: normal; font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--warn); margin-left: 5px; }
+.ll-row.major .ll-p { font-weight: 700; }
+.ll-d { font-size: 11.5px; }
+.ll-bar { display: flex; height: 13px; border-radius: 2px; overflow: hidden; background: color-mix(in srgb, var(--card-2) 60%, transparent); }
+.ll-bar i { display: block; height: 100%; flex: none; }
+.ll-row.major .ll-bar { box-shadow: 0 0 0 1px color-mix(in srgb, var(--warn) 70%, transparent); }
+.ll-v, .ll-c { text-align: right; white-space: nowrap; }
+.ll-c { color: var(--text-3); }
+.ll-now { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin: 6px 0; padding: 6px 8px; border-radius: 6px; border: 1px dashed var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); font-size: 12px; }
+.ll-now b { color: var(--accent-2); font-variant-numeric: tabular-nums; }
+.ll-legend { margin-top: 10px; }
+
+.ll-tier-card .dh-table td, .ll-tier-card .dh-table th { padding: 8px; }
+.ll-off td { opacity: .4; }
+.ll-tier-note { font-size: 12px; margin: 10px 0 0; line-height: 1.55; }
+.ll-h3 { font-size: 13px; margin: 16px 0 8px; }
+.ll-reach-h, .ll-reach-r { display: grid; grid-template-columns: 48px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; align-items: center; }
+.ll-reach-h { font-size: 11px; color: var(--text-3); padding-bottom: 4px; }
+.ll-reach-r { padding: 4px 0; font-size: 12px; font-variant-numeric: tabular-nums; border-top: 1px solid var(--line); }
+.ll-reach-r span { position: relative; display: flex; align-items: center; height: 18px; border-radius: 3px; background: color-mix(in srgb, var(--card-2) 70%, transparent); overflow: hidden; }
+.ll-reach-r i { position: absolute; left: 0; top: 0; bottom: 0; opacity: .55; }
+.ll-reach-r em { position: relative; font-style: normal; padding-left: 6px; }
+.ll-major td { background: color-mix(in srgb, var(--warn) 7%, transparent); }
+.ll-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; color: var(--warn); }
+.ll-notes p { margin: 0 0 8px; color: var(--text-2); max-width: 900px; line-height: 1.6; }
+.ll-notes p:last-child { margin-bottom: 0; }
+
+@media (max-width: 600px) {
+  .ll-head, .ll-row { grid-template-columns: 82px 52px minmax(0, 1fr) 58px; gap: 6px; }
+  .ll-c { display: none; }
+  .ll-p em { display: none; }
+  .ll-coin-f { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); width: 100%; }
+  .ll-q { width: 100%; }
+  .ll-coin { min-width: 0; width: 100%; }
+  .ll-f { max-width: 100%; }
+  .ll-stats .stat .v { font-size: 18px; }
+}

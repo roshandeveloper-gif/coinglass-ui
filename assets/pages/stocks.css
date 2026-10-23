@@ -1,0 +1,37 @@
+/* Page: stocks (Stocks overview). Shared stock bits (.stk-nm, .stk-sec) are repeated per page CSS. */
+.stk-ix { display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
+.stk-ix:hover { border-color: var(--text-3); color: inherit; }
+.stk-ix .v { font-size: 20px; }
+.stk-ix .dh-spark { width: 100%; height: 34px; margin-top: 6px; }
+.stk-bars { display: flex; flex-direction: column; gap: 2px; }
+.stk-bar { display: grid; grid-template-columns: minmax(120px, 1.1fr) minmax(0, 2fr) 64px; gap: 10px; align-items: center; padding: 6px 4px; border-radius: 6px; text-align: left; font-variant-numeric: tabular-nums; }
+.stk-bar:hover { background: var(--card-2); }
+.stk-bar-l { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.stk-bar-l i { width: 9px; height: 9px; border-radius: 2px; flex: none; }
+.stk-bar-t { position: relative; height: 12px; background: var(--card-2); border-radius: 3px; }
+.stk-bar-t::after { content: ''; position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1px; background: var(--text-3); opacity: .5; }
+.stk-bar-t s { position: absolute; top: 0; bottom: 0; border-radius: 3px; }
+.stk-bar-t s.pos { left: 50%; background: var(--up); }
+.stk-bar-t s.neg { right: 50%; background: var(--down); }
+.stk-bar b { text-align: right; font-weight: 600; }
+.stk-note { margin: 10px 0 0; font-size: 12px; }
+.stk-mv > div { gap: 10px; font-variant-numeric: tabular-nums; }
+.stk-mv-nm { font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; flex: 1; }
+.stk-mv-v { text-align: right; flex: none; }
+.stk-mv-v .sub { display: block; font-size: 11px; color: var(--text-3); }
+.stk-mv-c { min-width: 66px; text-align: right; font-weight: 600; }
+.stk-tabs { padding: 10px 14px 0; overflow-x: auto; }
+.stk-tabs .dh-seg { flex-wrap: nowrap; }
+.stk-q { width: 220px; }
+.stk-nm { font-size: 12px; font-weight: 400; }
+.stk-sec { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-2); }
+.stk-sec::before { content: ''; width: 8px; height: 8px; border-radius: 2px; background: var(--c); }
+.stk-table [data-px] { border-radius: 4px; padding: 0 2px; }
+
+@media (max-width: 820px) {
+  .stk-q { width: 100%; }
+  .stk-market .dh-tools { width: 100%; }
+  .stk-nm, .stk-mv-nm { display: none; }
+  .stk-bar { grid-template-columns: 128px minmax(0, 1fr) 58px; gap: 8px; }
+  .stk-bar-l small { display: none; } /* names like "Semiconductors" clipped under the member count at phone width */
+}

@@ -1,0 +1,41 @@
+/* Page: Liquidation Data — additions on top of the hub.css block (price-mode history, BTC vs liquidation, explore grid, coin search). */
+.lq-pxc { touch-action: pan-y; }
+.lq-hist-card .dh-tools { row-gap: 6px; }
+.lq-btc-legend { margin-bottom: 8px; }
+.lq-btc-sum { display: flex; flex-wrap: wrap; gap: 8px 28px; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 12px; }
+.lq-btc-sum > div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.lq-btc-sum b { font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.lq-q, .lq-xp-q { width: 170px; }
+/* The live feed fills its card to the height of the exchange table beside it (no half-cut row over empty space). */
+.lq-feed-card .dh-card-b { display: flex; flex-direction: column; min-height: 0; }
+.lq-feed-card .lq-feed { flex: 1 1 0; max-height: none; min-height: 420px; }
+/* Treemap: keep sub-labels legible, drop them in cells too small to hold them. */
+.lq-tm .dh-tm-cell { container-type: size; }
+.lq-tm .dh-tm-cell small { font-size: max(10px, .42em); }
+.lq-tm .dh-tm-cell span { font-size: max(10px, .72em); }
+@container (max-width: 90px) or (max-height: 62px) { .lq-tm .dh-tm-cell small { display: none; } }
+@container (max-width: 56px) or (max-height: 40px) { .lq-tm .dh-tm-cell span { display: none; } }
+.lq-xp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+.lq-xp { display: flex; flex-direction: column; gap: 6px; padding: 11px 12px; border-radius: 8px; background: var(--bg-2); border: 1px solid var(--line); min-width: 0; }
+.lq-xp:hover { border-color: var(--accent); color: inherit; }
+.lq-xp:hover .lq-xp-h b { color: var(--accent-2); }
+.lq-xp-h { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.lq-xp-h .muted { font-size: 11.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lq-xp-v { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+.lq-xp-v b { font-size: 16px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.lq-xp-v .muted { font-size: 11px; }
+.lq-xp-bar { display: block; height: 3px; border-radius: 2px; background: var(--card-2); overflow: hidden; }
+.lq-xp-bar i { display: block; height: 100%; background: var(--accent); }
+.lq-xp .lq-ls { margin: 0; font-size: 11.5px; }
+.lq-xp .bar-ls { min-width: 0; }
+.lq-xp-none { margin: 6px 0 0; }
+
+@media (max-width: 600px) {
+  .lq-q, .lq-xp-q { width: 100%; }
+  .lq-xp-card .dh-tools, .lq-hist-card .dh-tools { margin-left: 0; }
+  .lq-xp-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .lq-xp { padding: 9px 10px; }
+  .lq-xp-v b { font-size: 14px; }
+  .lq-btc-sum { gap: 8px 18px; }
+}

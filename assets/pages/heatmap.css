@@ -1,0 +1,19 @@
+/* Page: Liquidation Heatmap — additions on top of the hub.css block (timeframes, overlay, trade buttons, map range). */
+.hm-mode { display: inline-flex; }
+.hm-tf { min-width: 104px; }
+.hm-ov { display: inline-flex; align-items: center; gap: 6px; color: var(--text-2); font-size: 12px; white-space: nowrap; cursor: pointer; }
+.hm-ov input { accent-color: var(--accent); margin: 0; }
+.hm-trade { display: inline-flex; gap: 6px; margin-left: auto; }
+.hm-trade .dh-btn { min-width: 58px; }
+.hm-trade .dh-btn.long:hover { filter: brightness(1.1); color: #fff; }
+.hm-trade .dh-btn.short:hover { filter: brightness(1.1); color: #fff; }
+.hm-stage .dh-tip { max-width: calc(100% - 8px); }
+
+@media (max-width: 900px) {
+  .hm-trade { margin-left: 0; }
+}
+@media (max-width: 520px) {
+  .hm-bar1 .hm-pair { flex: 1 1 100%; }
+  .hm-trade { flex: 1 1 100%; }
+  .hm-trade .dh-btn { flex: 1; }
+}

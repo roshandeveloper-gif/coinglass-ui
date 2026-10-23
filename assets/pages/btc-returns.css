@@ -1,0 +1,23 @@
+/* Page: btc-returns */
+.ret-sub { font-size: 12px; margin-top: 4px; }
+.ret-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; }
+.ret-grid { width: 100%; border-collapse: separate; border-spacing: 0; font-variant-numeric: tabular-nums; font-size: 12px; }
+.ret-grid th, .ret-grid td { padding: 7px 6px; text-align: center; white-space: nowrap; border-bottom: 1px solid var(--line); border-right: 1px solid color-mix(in srgb, var(--line) 60%, transparent); }
+.ret-grid thead th { background: var(--card-2); color: var(--text-2); font-weight: 600; position: sticky; top: 0; }
+.ret-grid td { color: var(--text); min-width: 62px; }
+.ret-grid .ret-yr { position: sticky; left: 0; z-index: 1; background: var(--card-2); text-align: left; padding-left: 10px; min-width: 64px; font-weight: 600; }
+.ret-grid thead .ret-yr { z-index: 2; }
+.ret-grid .ret-tot { font-weight: 600; border-left: 2px solid var(--line); }
+.ret-grid td.cur { outline: 1.5px dashed var(--text-2); outline-offset: -3px; }
+.ret-grid tr.ret-stat th, .ret-grid tr.ret-stat td { border-top: 2px solid var(--line); font-weight: 600; }
+.ret-grid tr.ret-stat + tr.ret-stat th, .ret-grid tr.ret-stat + tr.ret-stat td { border-top: 0; }
+.ret-grid tbody tr:last-child th, .ret-grid tbody tr:last-child td { border-bottom: 0; }
+.ret-grid.week td { min-width: 50px; padding: 6px 4px; font-size: 11px; }
+.ret-grid.quarter td { min-width: 110px; }
+.ret-legend { margin-top: 10px; }
+.ret-chart { min-height: 260px; }
+
+@media (max-width: 560px) {
+  .ret-grid td { min-width: 54px; font-size: 11px; padding: 6px 4px; }
+  .ret-grid .ret-yr { min-width: 54px; padding-left: 6px; }
+}

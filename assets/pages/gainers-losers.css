@@ -1,0 +1,26 @@
+/* Page: gainers-losers (Gainers & Losers). */
+.gl-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.gl-bar .dh-sample { margin-left: auto; }
+.gl-ad { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.gl-ad .bar-ls { flex: 1; min-width: 0; height: 8px; border-radius: 4px; }
+.gl-ad-sub { margin-top: 6px; font-size: 11.5px; }
+.gl-card .dh-card-b { padding-left: 2px; padding-right: 2px; }
+.gl-card .dh-table td { padding: 7px 10px; }
+.gl-card .dh-table th { padding: 8px 10px; }
+.gl-chg { font-weight: 600; }
+.gl-card .dh-spark { display: inline-block; vertical-align: middle; }
+.gl-note { margin: 8px 0 0; font-size: 12px; }
+
+@media (max-width: 1180px) {
+  .gl-lists { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .gl-bar .dh-sample { margin-left: 0; }
+  .gl-card .dh-spark { width: 64px; }
+}
+.gl-lscell { display: inline-flex; align-items: center; gap: 8px; }
+.gl-lscell .bar-ls { min-width: 70px; width: 80px; }
+.gl-lscell .muted { min-width: 32px; text-align: right; font-size: 12px; }
+@media (max-width: 560px) {
+  .gl-lscell .bar-ls { min-width: 44px; width: 50px; }
+}

@@ -1,0 +1,16 @@
+/* Page: long-short — additions (base .ls-* styles live in hub.css). */
+.ls-viewtabs { margin: -4px 0 8px; }
+.ls-acc-chart { min-height: 260px; }
+.ls-sub { font-size: 12px; font-weight: 400; }
+.ls-exrow-t > span small { display: block; font-size: 10.5px; color: var(--text-3); font-weight: 400; }
+.ls-cust { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 14px; }
+.ls-cust label { display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 6px; background: var(--bg-2); border: 1px solid var(--line); cursor: pointer; font-size: 12.5px; }
+.ls-cust label:hover { border-color: var(--text-3); }
+.ls-cust input { accent-color: var(--accent); }
+.ls-cust-hint { margin: 0 0 10px; font-size: 12px; }
+.ls-cust-actions { display: flex; align-items: center; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+.ls-cust-actions .r { flex: 1; }
+
+@media (max-width: 560px) {
+  .ls-cust { grid-template-columns: minmax(0, 1fr); }
+}

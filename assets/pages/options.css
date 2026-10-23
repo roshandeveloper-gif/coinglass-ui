@@ -1,0 +1,108 @@
+/* Page: options (pages/options.js). Sample data only. */
+.opt-asset button { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; font-size: 13px; }
+.opt-stats { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+.opt-stats .stat .k { font-size: 12px; }
+.opt-stats .stat .v { font-size: 20px; }
+.opt-sub { font-size: 11.5px; margin-top: 2px; }
+
+/* Sticky section nav, sitting under the 56px site header. */
+.opt-nav { position: sticky; top: 56px; z-index: 20; margin: 0 -4px; padding: 6px 4px; background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.opt-nav .dh-seg { position: relative; }
+.opt-body { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.opt-sec { scroll-margin-top: 112px; min-width: 0; }
+
+/* Charts with an overlay layer for vertical markers. */
+.opt-cw { position: relative; }
+.opt-chart { min-height: 260px; }
+.opt-marks { position: absolute; inset: 0; pointer-events: none; }
+.opt-mark { position: absolute; top: 10px; bottom: 24px; width: 0; border-left: 1px dashed var(--warn); }
+.opt-mark span { position: absolute; top: 0; left: 4px; font-size: 11px; white-space: nowrap; color: var(--warn); background: color-mix(in srgb, var(--card) 85%, transparent); padding: 0 4px; border-radius: 3px; }
+.opt-mark.pain { border-left: 1px solid #f0b90b; }
+.opt-mark.pain span { top: 18px; color: #f0b90b; }
+.opt-legend { margin-top: 10px; }
+
+/* Venue share. */
+.opt-donut { width: 100%; max-width: 240px; height: 240px; margin: 6px auto 14px; }
+.opt-donut-v { font-size: 18px; }
+.opt-share { flex-direction: column; gap: 8px; }
+.opt-share span { display: flex; }
+.opt-share b { margin-left: auto; color: var(--text); font-weight: 600; font-variant-numeric: tabular-nums; }
+.opt-share em { min-width: 72px; text-align: right; font-style: normal; color: var(--text-3); font-variant-numeric: tabular-nums; }
+
+/* Expiry table. */
+.opt-exp-table { margin-top: 12px; border-top: 1px solid var(--line); }
+.opt-kind { font-size: 10px; padding: 0 5px; margin-left: 4px; }
+.opt-kind.k-W { color: var(--text-3); }
+.opt-kind.k-M { color: var(--accent-2); }
+.opt-kind.k-Q { color: var(--warn); }
+
+/* Max pain summary. */
+.opt-pain-stats { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; margin-bottom: 12px; }
+.opt-pain-stats > div { display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 8px; font-variant-numeric: tabular-nums; min-width: 0; }
+.opt-pain-stats .muted { font-size: 11.5px; }
+.opt-pain-v { color: #f0b90b; font-size: 15px; }
+
+/* Option chain. */
+.opt-chain th, .opt-chain td { padding: 7px 10px; }
+.opt-chain thead tr:first-child th { font-size: 12.5px; color: var(--text); }
+.opt-chain .opt-calls-h { color: var(--up) !important; border-bottom-color: color-mix(in srgb, var(--up) 45%, var(--line)); }
+.opt-chain .opt-puts-h { color: var(--down) !important; border-bottom-color: color-mix(in srgb, var(--down) 45%, var(--line)); }
+.opt-chain td.opt-itm { background: color-mix(in srgb, var(--accent) 8%, transparent); }
+.opt-chain .opt-k { font-weight: 600; background: var(--bg-2); border-left: 1px solid var(--line); border-right: 1px solid var(--line); }
+.opt-chain .opt-k .pill { font-size: 9.5px; padding: 0 4px; color: var(--warn); margin-left: 4px; }
+.opt-chain .opt-mk { font-weight: 600; color: var(--text); }
+.opt-chain tr.opt-atm td { background: color-mix(in srgb, var(--warn) 12%, transparent); }
+.opt-chain tr.opt-atm td.opt-k { background: color-mix(in srgb, var(--warn) 20%, var(--bg-2)); }
+.opt-chain tr.opt-spot-row td { padding: 0; height: 0; border-bottom: 1px dashed var(--warn); text-align: center; }
+.opt-chain tr.opt-spot-row span { display: inline-block; font-size: 10.5px; line-height: 16px; padding: 0 8px; margin: 3px 0; border-radius: 8px; background: var(--warn); color: #1a1300; font-weight: 600; }
+.opt-chain tbody tr.opt-spot-row:hover td { background: transparent; }
+.opt-note { font-size: 12px; margin: 10px 0 0; }
+
+/* Net premium heatmap: CSS grid of strike rows × 24 hourly columns. */
+.opt-hm-wrap { position: relative; }
+.opt-hm { display: grid; grid-template-columns: 64px repeat(24, minmax(20px, 1fr)); gap: 2px; min-width: 560px; font-variant-numeric: tabular-nums; }
+.opt-hm > b { font-size: 11.5px; font-weight: 500; color: var(--text-2); display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; }
+.opt-hm > b.atm { color: var(--warn); font-weight: 700; }
+.opt-hm > i { height: 22px; border-radius: 2px; background: var(--hm, var(--card-2)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--line) 50%, transparent); }
+.opt-hm > i:hover { outline: 1px solid var(--text); outline-offset: -1px; }
+.opt-hm > u { text-decoration: none; font-size: 10.5px; color: var(--text-3); white-space: nowrap; padding-top: 4px; }
+.opt-hm-wrap .dh-tip { top: 0; }
+.opt-hm-scale { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-top: 12px; font-size: 12px; }
+.opt-hm-scale i { width: 140px; height: 8px; border-radius: 4px; background: linear-gradient(90deg, var(--down), color-mix(in srgb, var(--card-2) 80%, transparent), var(--up)); }
+
+.opt-about p { margin: 0 0 10px; color: var(--text-2); max-width: 900px; }
+.opt-about p:last-child { margin-bottom: 0; }
+.opt-about b { color: var(--text); }
+
+/* Venue tabs (Overview / venue / Max Pain). */
+.opt-venues { border-bottom: 1px solid var(--line); padding-bottom: 6px; min-width: 0; }
+.opt-venue-tabs button { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
+.opt-flash > .dh-card, .opt-flash > .grid > .dh-card { animation: opt-flash 1.6s ease-out; }
+@keyframes opt-flash { 0%, 30% { box-shadow: 0 0 0 2px #f0b90b; } 100% { box-shadow: 0 0 0 0 transparent; } }
+.opt-dim { opacity: 0.45; }
+
+/* Rank tables. */
+.opt-rank .dh-card-b { padding: 4px 0 0; }
+.opt-rank-v { padding: 0; text-align: left; }
+.opt-rank-v:hover { color: var(--accent-2); }
+.opt-rank tr.opt-sel td { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+
+/* Call vs put cards. */
+.opt-cp .ex-donut { width: 180px; height: 180px; }
+.opt-cp .ex-legend > div { gap: 8px; }
+.opt-cp-usd { min-width: 70px; text-align: right; font-variant-numeric: tabular-nums; }
+
+@media (max-width: 1180px) {
+  .opt-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .opt-pain-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 820px) {
+  .opt-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .opt-stats .stat { padding: 12px; }
+  .opt-stats .stat .v { font-size: 17px; }
+  .opt-pain-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .opt-mark span { font-size: 10px; }
+  .opt-cp .ex-donut { width: 150px; height: 150px; }
+  .opt-cp .ex-legend { min-width: 0; }
+}
+@media (max-width: 560px) { .opt-cp .ex-legend { flex: 1 1 100%; } .opt-cp { justify-content: center; } }

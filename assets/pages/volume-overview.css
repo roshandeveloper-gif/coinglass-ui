@@ -1,0 +1,22 @@
+/* Page: volume-overview (Volume Overview). */
+.vo-stats .stat { display: flex; flex-direction: column; gap: 2px; }
+.vo-spark { margin-top: 8px; }
+.vo-spark .dh-spark { width: 100%; height: 30px; }
+.vo-legend { margin-bottom: 10px; }
+.vo-leg2 { margin-bottom: 10px; }
+.vo-tm.dh-treemap { height: 300px; }
+.vo-note { margin: 8px 0 0; font-size: 12px; }
+.vo-table-card .dh-card-b { padding-left: 0; padding-right: 0; }
+.vo-share { display: inline-block; width: 80px; height: 6px; margin-right: 8px; border-radius: 3px; background: var(--card-2); overflow: hidden; vertical-align: middle; }
+.vo-share i { display: block; height: 100%; border-radius: 3px; }
+.vo-table-card .pill.muted { font-size: 10px; padding: 0 5px; }
+@media (max-width: 560px) {
+  .vo-tm.dh-treemap { height: 240px; }
+  #vo-q { width: 130px !important; }
+}
+/* Treemap: legible sub-labels, dropped (then the value) in tiles too small to hold them. */
+.vo-tm .dh-tm-cell { container-type: size; }
+.vo-tm .dh-tm-cell small { font-size: max(10px, .42em); }
+.vo-tm .dh-tm-cell span { font-size: max(10px, .72em); }
+@container (max-width: 80px) or (max-height: 58px) { .vo-tm .dh-tm-cell small { display: none; } }
+@container (max-width: 52px) or (max-height: 38px) { .vo-tm .dh-tm-cell span { display: none; } }

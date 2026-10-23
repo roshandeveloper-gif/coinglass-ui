@@ -1,0 +1,24 @@
+/* Page: exchange-balance */
+.eb-sub { font-size: 11.5px; margin-top: 2px; font-weight: 400; }
+.eb-stats .stat .v { font-size: 20px; }
+.eb-stats .stat .v small { font-size: 12px; }
+.eb-card .dh-card-b { padding-top: 4px; }
+.eb-card tbody tr { cursor: pointer; }
+.eb-card tr.eb-sel td { background: color-mix(in srgb, var(--accent) 10%, transparent); }
+.eb-card .dh-spark { margin-left: auto; }
+.eb-legend { margin-top: 10px; }
+.eb-note { margin: 8px 0 0; font-size: 11.5px; }
+.eb-view { max-width: 160px; }
+.eb-share { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 18px; align-items: center; }
+.eb-donut { width: 170px; height: 170px; }
+.eb-donut .dh-donut-c b { font-size: 13px; }
+.eb-dot { width: 9px; height: 9px; border-radius: 2px; flex: none; }
+.eb-pct { min-width: 54px; text-align: right; font-variant-numeric: tabular-nums; }
+.eb-share-list > div { padding: 6px 0; font-size: 12.5px; }
+.eb-about p { margin: 0 0 8px; color: var(--text-2); max-width: 900px; line-height: 1.6; }
+.eb-about p:last-child { margin-bottom: 0; }
+@media (max-width: 560px) {
+  .eb-share { grid-template-columns: minmax(0, 1fr); justify-items: center; }
+  .eb-share-list { width: 100%; }
+  .eb-stats .stat .v { font-size: 18px; }
+}

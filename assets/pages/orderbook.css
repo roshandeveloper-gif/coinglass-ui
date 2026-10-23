@@ -1,0 +1,48 @@
+/* Page: orderbook (Order Book Heatmap). Reuses the .hm-* toolbar/stage styles from hub.css. */
+.ob-layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 16px; align-items: start; }
+.ob-col { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.ob-main { padding: 12px 14px 14px; gap: 10px; }
+.ob-title { font-size: 12.5px; }
+.ob-live { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--up); font-weight: 600; }
+.ob-live i { width: 7px; height: 7px; border-radius: 50%; background: var(--up); animation: ob-pulse 2s ease-in-out infinite; }
+@keyframes ob-pulse { 50% { opacity: .25; } }
+.ob-note { margin: 8px 0 0; font-size: 11.5px; }
+.ob-merge .dh-select { height: 26px; padding: 0 6px; font-size: 12px; }
+.ob-bar1 option:disabled { color: var(--text-3); }
+.ob-legend .ob-li2 { margin-left: -4px; }
+
+/* Ladder */
+.ob-ladder-card { position: sticky; top: 72px; }
+.ob-ladder-card .dh-card-b { padding-top: 8px; }
+.ob-ladder { font-size: 12px; font-variant-numeric: tabular-nums; }
+.ob-row { position: relative; display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 6px; padding: 2px 4px; line-height: 18px; }
+.ob-row span { position: relative; z-index: 1; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ob-row span:first-of-type { text-align: left; }
+.ob-row s, .ob-row i { position: absolute; top: 1px; bottom: 1px; right: 0; border-radius: 2px; transition: width .4s ease; }
+.ob-row.ask s { background: color-mix(in srgb, var(--down) 9%, transparent); }
+.ob-row.ask i { background: color-mix(in srgb, var(--down) 24%, transparent); }
+.ob-row.bid s { background: color-mix(in srgb, var(--up) 9%, transparent); }
+.ob-row.bid i { background: color-mix(in srgb, var(--up) 24%, transparent); }
+.ob-row.ask .p { color: var(--down); }
+.ob-row.bid .p { color: var(--up); }
+.ob-head { color: var(--text-3); font-size: 11.5px; padding-bottom: 4px; }
+.ob-mid { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 8px 4px; margin: 4px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.ob-mid b { font-size: 17px; }
+.ob-mid span { font-size: 11.5px; }
+.ob-ratio { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 11.5px; font-weight: 600; }
+.ob-ratio .bar-ls { flex: 1; min-width: 0; }
+
+/* Large orders */
+.ob-wtable td, .ob-wtable th { padding: 7px 10px; }
+.ob-sub-v { font-size: 11px; }
+.ob-walls-card .dh-card-b { padding-left: 4px; padding-right: 4px; }
+
+@media (max-width: 1180px) {
+  .ob-layout { grid-template-columns: minmax(0, 1fr); }
+  .ob-ladder-card { position: static; }
+  .ob-ladder { max-width: 520px; }
+}
+@media (max-width: 560px) {
+  .ob-title .r { margin-left: 0; }
+  .hm-thr { flex-wrap: wrap; }
+}

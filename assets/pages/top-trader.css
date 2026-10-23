@@ -1,0 +1,27 @@
+/* Page: top-trader (Top Trader Long/Short). */
+.tt-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.tt-bar .dh-sample { margin-left: auto; }
+.tt-ex { min-width: 0; max-width: 100%; }
+.tt-chart { min-height: 280px; }
+.tt-legend { margin-top: 10px; }
+.tt-note { margin: 8px 0 0; font-size: 12px; }
+.tt-sub { font-size: 12px; font-weight: 400; }
+.tt-stat-sub { margin-top: 6px; font-size: 12px; }
+.tt-delta { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+.tt-flush .dh-card-b { padding-left: 2px; padding-right: 2px; }
+.tt-flush .dh-table td { padding: 8px 10px; }
+.tt-flush .dh-table th { padding: 8px 10px; }
+.tt-cell { display: flex; align-items: center; gap: 8px; }
+.tt-cell > span { width: 34px; font-weight: 600; }
+.tt-cell .bar-ls { min-width: 70px; flex: 1; }
+.tt-flush .dh-spark { display: inline-block; vertical-align: middle; }
+.tt-faq p { margin: 0 0 10px; color: var(--text-2); max-width: 900px; }
+.tt-faq p:last-child { margin-bottom: 0; }
+
+@media (max-width: 1180px) {
+  .tt-delta { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .tt-bar .dh-sample { margin-left: 0; }
+  .tt-chart { min-height: 240px; }
+}
